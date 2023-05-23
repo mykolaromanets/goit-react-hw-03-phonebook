@@ -1,0 +1,13 @@
+.Section__container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.Section__title {
+  margin: 0;
+}
