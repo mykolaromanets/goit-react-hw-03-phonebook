@@ -17,16 +17,13 @@ export class App extends React.Component {
   };
 
   componentDidMount() {
-    console.log('App componentDidMount');
     const contacts = localStorage.getItem('contacts');
     const parsedContacts = JSON.parse(contacts);
     this.setState({ contacts: parsedContacts });
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log('App componentDidUpdate');
     if (this.state.contacts !== prevState.contacts) {
-      console.log('Обновилось поле contacts, записываю contacts в хранилище');
       localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
     }
   }
